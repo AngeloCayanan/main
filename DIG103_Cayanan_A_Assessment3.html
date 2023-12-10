@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIG103_Cayanan_A_Assessment3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://imgur.com/DhCeRZh.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #fbff00;
+        }
+
+        header {
+            background-color: #e4002b; 
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ddff00; 
+            padding: 10px;
+        }
+
+        nav a {
+            color: #000000; 
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .page-content {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #e4002b; 
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .scroll-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffd800; 
+            color: #e4002b; 
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DIG103_Cayanan_A_Assessment3</h1>
+    </header>
+
+    <nav>
+        <div class="menu-icon">&#9776;</div>
+        <div class="menu-items">
+            <a href="file:///C:/Users/Asus/OneDrive/Desktop/New%20folder/Home.html">Home</a>
+            <a href="file:///C:/Users/Asus/OneDrive/Desktop/New%20folder/artist.html">Artists</a>
+            <a href="file:///C:/Users/Asus/OneDrive/Desktop/New%20folder/menu.html">Food Menu</a>
+            <a href="file:///C:/Users/Asus/OneDrive/Desktop/New%20folder/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="scroll-to-top" onclick="scrollToTop()">^ Scroll to Top</div>
+
+    <div class="page-content">
+        <img class="hero-image" src="https://imgur.com/DhCeRZh.jpg" alt="Hero Image">
+
+        <section>
+            <h2>About This Assessment</h2>
+            <p>
+                Welcome to my assessment for DIG103! In this project, I've created a website that showcases various features, including a home page, an artists section, a food menu, and a contact page. Feel free to explore and enjoy the content.
+            </p>
+            <p>
+                If you have any questions or feedback, don't hesitate to contact me. Thank you for visiting!
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; Thank You.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu-icon").click(function () {
+                $(".menu-items").slideToggle();
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $(".scroll-to-top").fadeIn();
+                } else {
+                    $(".scroll-to-top").fadeOut();
+                }
+            });
+        });
+
+        function scrollToTop() {
+            $("html, body").animate({ scrollTop: 0 }, 800);
+        }
+    </script>
+</body>
+</html>
